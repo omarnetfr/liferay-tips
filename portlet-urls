@@ -1,5 +1,5 @@
 ===========================================
-========= Portlet URL Plugin  =============
+========= Portlet URL Plugin Loading  =====
 ===========================================
 
 AUI().ready('liferay-portlet-url', function(A){
