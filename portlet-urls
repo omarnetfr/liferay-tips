@@ -1,0 +1,16 @@
+===========================================
+========= Portlet URL Plugin  =============
+===========================================
+
+AUI().ready('liferay-portlet-url', function(A){
+    
+});
+
+===========================================
+========= Portlet Resource URL JS =========
+===========================================
+
+url = Liferay.PortletURL.createResourceURL();
+url.setPortletId('xxxx_WAR_xxxxportlet');
+url.setResourceId("xxxxxx");
+    
