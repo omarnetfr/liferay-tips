@@ -1,9 +1,9 @@
-		In Controller :
+In Controller :
     
-    JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticleByUrlTitle(themeDisplay.getScopeGroupId(), "friendly-url");
+	JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticleByUrlTitle(themeDisplay.getScopeGroupId(), "friendly-url");
 			
-		beanForm.setJournalArticleId(journalArticle.getArticleId());
+	beanForm.setJournalArticleId(journalArticle.getArticleId());
     
-    in JSP : 
+in JSP : 
     
-    <liferay-ui:journal-article groupId='<%= themeDisplay.getScopeGroupId() %>' articleId='${beanForm.articleId}' />
+	<liferay-ui:journal-article groupId='<%= themeDisplay.getScopeGroupId() %>' articleId='${beanForm.articleId}' />
