@@ -14,3 +14,35 @@ url = Liferay.PortletURL.createResourceURL();
 url.setPortletId('xxxx_WAR_xxxxportlet');
 url.setResourceId("xxxxxx");
     
+===========================================
+========= Portlet Resource URL (Spring)  ==
+===========================================
+
+<portlet:resourceURL var="loadContents" id="loadContents"></portlet:resourceURL>
+
+AUI().ready(
+    function(A) {            
+        A.use('aui-io-request', 
+                function(aui) {
+                A.io.request("<%=loadContents%>", {
+                    autoLoad : false,
+                    cache : false,
+                    dataType : 'json',
+                    data:{},
+                    method:'POST',
+                    on : {
+                        success : function(event, id, xhr) {
+                            var response = this.get('responseData');
+                             // add logic here after response
+                        }
+                    }
+                }).start();
+            }
+    );}
+);
+
+@ResourceMapping("loadContents")
+public void loadContents(final ResourceRequest resourceRequest, final ResourceResponse resourceResponse)
+{
+     // your business logic goes here
+}
