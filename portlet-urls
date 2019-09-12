@@ -13,6 +13,15 @@ AUI().ready('liferay-portlet-url', function(A){
 url = Liferay.PortletURL.createResourceURL();
 url.setPortletId('xxxx_WAR_xxxxportlet');
 url.setResourceId("xxxxxx");
+
+===========================================
+========= Portlet Render URL JS ===========
+===========================================
+
+var url = Liferay.PortletURL.createRenderURL();
+//url.setWindowState("EXCLUSIVE");
+url.setPortletId('xxxx_WAR_xxxxportlet');
+url.setParameter("render", "xxxxxx");
     
 ===========================================
 ========= Portlet Resource URL (Spring)  ==
